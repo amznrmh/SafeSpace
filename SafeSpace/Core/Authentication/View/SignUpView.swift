@@ -12,6 +12,7 @@ struct SignUpView: View {
     @State private var fullname = ""
     @State private var password = ""
     @State private var confirmPassword = ""
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         
@@ -44,6 +45,34 @@ struct SignUpView: View {
             }
             .padding(.horizontal)
             .padding(.top, 12)
+            
+            Button{
+                print("Create user account...")
+            } label: {
+                HStack {
+                    Text("Create account")
+                        .fontWeight(.semibold)
+                    Image(systemName: "arrow.right")
+                }
+                .foregroundColor(.white)
+                .frame(width:UIScreen.main.bounds.width - 32, height :48)
+            }
+            .background(Color(.systemBlue))
+            .cornerRadius(10)
+            .padding(.top,24)
+            
+            Spacer()
+            
+            Button{
+                dismiss()
+            } label: {
+                HStack (spacing:3){
+                Text("Have an account?")
+                    Text("Sign in")
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                }
+                .font(.system(size:14))
+            }
         }
     }
 }
