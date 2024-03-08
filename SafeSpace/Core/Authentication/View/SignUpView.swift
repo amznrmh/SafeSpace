@@ -30,7 +30,7 @@ struct SignUpView: View {
                           placeholder: "....@..")
                 .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                 
-                InputView(text: $email,
+                InputView(text: $fullname,
                           title: "Full Name",
                           placeholder: "Enter Name")
                 
@@ -39,13 +39,15 @@ struct SignUpView: View {
                           placeholder: "Enter Password..",
                           isSecureField: true)
                 
-                InputView(text: $password,
+                InputView(text: $confirmPassword,
                           title: "Confirm Password",
                           placeholder: "Confirm your Password..",
                           isSecureField: true)
             }
             .padding(.horizontal)
             .padding(.top, 12)
+            
+            //sign up button
             
             Button{
                 Task {

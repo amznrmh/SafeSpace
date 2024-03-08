@@ -142,8 +142,8 @@
 				07E963522B556ADE00835429 /* Components */,
 				07E963512B556AD300835429 /* Core */,
 				07E963502B556AC100835429 /* Model */,
-				070E93EB2B8E048500E028FA /* GoogleService-Info.plist */,
 				076FA9E22B4991280063999A /* Assets.xcassets */,
+				070E93EB2B8E048500E028FA /* GoogleService-Info.plist */,
 				076FA9E42B4991280063999A /* Preview Content */,
 			);
 			path = SafeSpace;
