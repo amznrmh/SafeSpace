@@ -9,7 +9,29 @@ import SwiftUI
 
 struct CommunityView: View {
     var body: some View {
-        Text("Share your thoughts with others on the platform!")
+       
+        NavigationStack{
+            
+            ZStack {
+                //AppColor.background.ignoresSafeArea()
+                ScrollView{
+                    VStack {
+                        Text("Safe Space Community")
+                            .font(.custom("Futura", size: 36))
+                            .foregroundColor(.teal)
+                            .fontWeight(.bold)
+                            
+                    }
+                    LazyVStack (spacing: 32){
+                        ForEach(0...10, id:\.self){ listing in
+                            CommunityPostView()
+                                .frame(height: 400)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
