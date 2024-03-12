@@ -12,6 +12,11 @@ struct EntryView: View {
         
         NavigationStack {
             
+            HStack{
+                
+            }
+            
+            
             ZStack{
                 ScrollView{
                     HStack(){

@@ -19,6 +19,10 @@ class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
+    
+//    @Published var therapistsSession: FirebaseAuth.Therapists?
+//    @Published var currentTherapists: Therapists?
+    
     init() {
         //check and see if there is a current user, stay logged in 
         self.userSession = Auth.auth().currentUser
@@ -40,7 +44,7 @@ class AuthViewModel: ObservableObject {
     }
     
     
-    //asyncronus function
+    //asyncronus function creates user account
     func createUser(withEmail email: String, password: String, fullname: String) async throws {
         do{
     //create user using firebase code, await and store in result
@@ -58,6 +62,13 @@ class AuthViewModel: ObservableObject {
             print("DEBUG: Failed to create user with error \(error.localizedDescription)")
         }
     }
+    //create account for professional therapists
+//    func createProfessionalAcc (withEmail email : String, password: String, fullname: String, qualifications: String, field: String) async throws {
+//        do{
+//            let result = try await Auth.auth().createUser(withEmail: email, password: password)
+//            self.therapistsSession = result.therapists
+//        }
+//    }
     
     func signOut (){
         do {
