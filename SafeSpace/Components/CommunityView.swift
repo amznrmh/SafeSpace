@@ -22,7 +22,7 @@ struct CommunityView: View {
                             .fontWeight(.bold)
                             
                     }
-                    LazyVStack (spacing: 32){
+                    LazyVStack (spacing: -95){
                         ForEach(0...10, id:\.self){ listing in
                             CommunityPostView()
                                 .frame(height: 400)

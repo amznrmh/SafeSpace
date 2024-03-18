@@ -89,16 +89,36 @@ struct SignUpView: View {
             
             Spacer()
             
-            Button{
-                dismiss()
-            } label: {
-                HStack (spacing:3){
-                Text("Have an account?")
-                    Text("Sign in")
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            VStack (spacing: 12){
+                
+                NavigationLink{
+                    TherapistSignUp()
+                        .navigationBarBackButtonHidden()
+                }label: {
+                    HStack (spacing:3){
+                    Text("Licensed Doctor?")
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Text("Create account")
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    }
+                    .font(.system(size:14))
                 }
-                .font(.system(size:14))
+
+                
+                Button{
+                    dismiss()
+                } label: {
+                    HStack (spacing:3){
+                    Text("Have an account?")
+                        Text("Sign in")
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    }
+                    .font(.system(size:14))
+                }
             }
+            
+           
         }
     }
 }
